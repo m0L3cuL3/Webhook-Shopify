@@ -19,6 +19,7 @@ app.post('/webhook', (req, res) => {
     console.log(`Status => ${status}`)
 
     q.enqueue(webhook_id);
+    console.log('\n========== ⚡ Queue Items ⚡ ==========\n')
     q.print();
     console.log(q.getLength());
 })
